@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -69,6 +69,15 @@ h6 {
     background-color: #222;
 }
 
+.bg-eery {
+    background-color: #0D1321;
+}
+
+.bg-eery .section-heading, section.bg-eery p.section-subheading-feature, .service-heading {
+    color: #EFF8E2;
+    font-weight: 200;
+}
+
 .btn-primary {
     border-color: #{{ site.data.template.color.primary }};
     text-transform: uppercase;
@@ -121,13 +130,15 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl {
     padding: 20px 40px;
     border-color: #{{ site.data.template.color.primary }};
-    border-radius: 3px;
+    #border-radius: 3px;
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 300;
+    letter-spacing: 2px;
     color: #fff;
     background-color: #{{ site.data.template.color.primary }};
+
 }
 
 .btn-xl:hover,
@@ -178,6 +189,10 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
     color: #{{ site.data.template.color.primary }};
+}
+.navbar-default .navbar-brand img {
+    width: 270px;
+    height: auto;
 }
 
 .navbar-default .navbar-brand:hover,
@@ -257,25 +272,46 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background: rgba(120,120,120,.7);
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+
+    .navbar-default.navbar-shrink .navbar-brand img {
+        width: 170px;
+        height: auto;
+        position: relative;
+        top: -15px;
+    }
+}
+
+.bg-gradient-light {
+    background: #eee; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #E1EEF8, #9FA8B0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #E1EEF8, #9FA8B0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #E1EEF8, #9FA8B0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #E1EEF8, #9FA8B0); /* Standard syntax */
 }
 
 header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    #background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    #background-color: #cad3da;
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: #eee; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #E1EEF8, #9FA8B0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #E1EEF8, #9FA8B0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #E1EEF8, #9FA8B0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #E1EEF8, #9FA8B0); /* Standard syntax */
 }
 
 header .intro-text {
@@ -287,8 +323,10 @@ header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 22px;
-    font-style: italic;
     line-height: 22px;
+    font-weight: 100;
+    font-style: normal!important;
+    text-shadow: 2px 2px 18px rgba(0,0,0,.2);
 }
 
 header .intro-text .intro-heading {
@@ -296,21 +334,23 @@ header .intro-text .intro-heading {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-size: 50px;
-    font-weight: 700;
     line-height: 50px;
+    text-shadow: 2px 2px 18px rgba(0,0,0,.2);
+}
+
+header .intro-text .intro-heading img {
+    width: 140px;
 }
 
 @media(min-width:768px) {
     header .intro-text {
         padding-top: 300px;
-        padding-bottom: 200px;
     }
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
     }
 
@@ -332,6 +372,15 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    font-weight: 400;
+}
+
+section h3.section-highlight {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 20px;
+    font-weight: 400;
 }
 
 section h3.section-subheading {
@@ -341,6 +390,13 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
+}
+
+section p.section-subheading-feature {
+    font-size: 18px;
+    color: #7b8a8b;
+    font-weight:300;
+    margin-bottom: 2em;
 }
 
 @media(min-width:768px) {
@@ -354,19 +410,19 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-#portfolio .portfolio-item {
+.workshops .portfolio-item {
     right: 0;
     margin: 0 0 15px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+.workshops .portfolio-item .portfolio-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+.workshops .portfolio-item .portfolio-link .portfolio-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -378,11 +434,11 @@ section h3.section-subheading {
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+.workshops .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+.workshops .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -393,16 +449,16 @@ section h3.section-subheading {
     color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+.workshops .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
     margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+.workshops .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+.workshops .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
     margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+.workshops .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
     max-width: 400px;
@@ -410,24 +466,24 @@ section h3.section-subheading {
     background-color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+.workshops .portfolio-item .portfolio-caption h4 {
     margin: 0;
     text-transform: none;
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+.workshops .portfolio-item .portfolio-caption p {
     margin: 0;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
     font-style: italic;
 }
 
-#portfolio * {
+.workshops * {
     z-index: 2;
 }
 
 @media(min-width:767px) {
-    #portfolio .portfolio-item {
+    .workshops .portfolio-item {
         margin: 0 0 30px;
     }
 }
@@ -640,6 +696,7 @@ section h3.section-subheading {
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
+    max-width: 200px;
 }
 
 .team-member h4 {
@@ -864,4 +921,16 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+}
+
+.bg-splash {
+    background-image: url('{{site.baseUrl}}/img/logos/euvtrans2.png');
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-opacity: 1;
 }

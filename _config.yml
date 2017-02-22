@@ -1,59 +1,47 @@
-url: https://y7kim.github.io
-baseurl: /agency-jekyll-theme/
+#url: http://localhost:4000
+#baseurl: /
+blogUrl: http://community.beck.de/category/legal-tech
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+title: Legal Tech Center
+email: info@legaltech.center
+description: "Am Legal Tech Center arbeiten Wissenschaftler, Anwälte, Unternehmer und Programmierer an digitalen Technologien und technologiegestützten Methoden im Recht"
 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
+- name: Stephan Breidenbach
+  pic: sb
+  position: Mitgründer und Leiter
   social:
+    - title: envelope-o
+      url: mailto:stephan.breidenbach@legaltech.center
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
+      url: https://twitter.com/stebreidenbach
 
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
+- name: Florian Glatz
+  pic: fg
+  position: Mitgründer und Leiter
   social:
+    - title: envelope-o
+      url: mailto:florian.glatz@legaltech.center
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+      url: https://twitter.com/heckerhut
 
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
+- name: Paul von Bünau
+  pic: pvb
+  position: Fellow
   social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+    - title: envelope-o
+      url: mailto:paul.von.buenau@legaltech.center
+
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+  - network:
+    title: info@legaltech.center
+    url: mailto:info@legaltech.center
+
 
 # Postal address (add as many lines as necessary)
 address:

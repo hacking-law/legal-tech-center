@@ -2,23 +2,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
+                    <span class="copyright">&copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
                 </div>
                 <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
+                    <ul class="list-inline">
                         {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
+                        <li><a href="{{ network.url }}"><span class="copyright">{{ network.title }}</span></a></li>
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
+                <div class="col-md-4" style="text-align: right">
+                    <a href="/imprint"><span class="copyright">Impressum</span></a>
                 </div>
             </div>
         </div>
