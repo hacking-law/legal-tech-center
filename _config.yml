@@ -30,13 +30,21 @@ people:
 
 - name: Paul von Bünau
   pic: pvb
-  position: Fellow
+  position: Factuly
   social:
     - title: envelope-o
       url: mailto:paul.buenau@legaltech.center
     - title: twitter
       url: https://twitter.com/idalab_de
 
+- name: Petra Arends-Paltzer
+  pic: pap
+  position: Faculty
+  social:
+    - title: envelope-o
+      url: mailto:petra.arends-paltzer@legaltech.center
+    - title: twitter
+      url: https://twitter.com/ppaltzer
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
